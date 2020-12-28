@@ -692,3 +692,101 @@ section
     text-align: center;
     margin-top: 40px;
 }
+
+footer
+{
+    background: #2d2d51;
+    padding: 80px 0;
+}
+
+footer .menu
+{
+    margin-right: auto;
+    margin-left: 0;
+    color: #ffffff;
+}
+
+footer .menu ul
+{
+    padding-left: 0;
+}
+
+footer .menu a 
+{
+    z-index: 5;
+}
+
+footer .menu a:after
+{
+    opacity: 0.2;
+}
+
+footer .contacts .phone
+{
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 700;
+    padding-left: 50px;
+}
+
+footer .contacts .phone:after
+{
+    background: url(../images/icons/phone-white.png);
+    width: 36px;
+    height: 36px;
+}
+
+footer .contacts a:not(.phone)
+{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .contacts .soc_links
+{
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
+
+footer .contacts .soc_links a:nth-child(2)
+{
+    padding-right: 5px;
+}
+
+footer .row
+{
+    align-items: center;
+}
+
+footer .copyright
+{
+    font-size: 12px;
+    width: 220px;
+    color: #ffffff;
+    margin-top: 25px;
+}
+
+footer .links_row
+{
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+footer .links_row .policy
+{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+footer .links_row .salut
+{
+    font-weight: 700;
+}
+
