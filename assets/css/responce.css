@@ -483,4 +483,9 @@
     {
         background: #F0F1F3;
     }
+
+    header .menu
+    {
+        padding-top: 0;
+    }
 }
