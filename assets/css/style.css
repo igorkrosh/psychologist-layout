@@ -292,6 +292,7 @@ section
     position: relative;
     margin: 50px 0;
     z-index: 5;
+    line-height: 65px;
 }
 
 .title:after
@@ -322,6 +323,13 @@ section
     content: "Почему я?";
     left: -45px;
     top: -30px;
+}
+
+.section_acquainted .title:after
+{
+    content: "Давайте познакомимся поближе";
+    left: -40px;
+    top: -40px;
 }
 
 .section_services .title
@@ -541,4 +549,20 @@ section
 .section_why .btn_wrapper
 {
     margin-top: 50px;
+}
+
+.section_acquainted .col_text
+{
+    width: 400px;
+}
+
+.youtube_video
+{
+    width: 700px;
+    height: 500px;
+}
+
+.section_acquainted .col_video
+{
+    margin-left: auto;
 }
