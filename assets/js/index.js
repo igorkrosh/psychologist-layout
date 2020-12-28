@@ -4,6 +4,7 @@ function Core()
 {
     SetReviewSlider();
     SetModal();
+    SetMobileMenu();
 }
 
 function SetReviewSlider()
@@ -69,3 +70,21 @@ function HideModal(modalId)
         $('.modal_backdrop').remove();
     });
 }
+
+function SetMobileMenu()
+{
+    $('.btn_menu').on('click', function()
+    {
+        if ($('header .menu').hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $('header .menu').removeClass('active');
+        }
+        else
+        {
+            $(this).addClass('active');
+            $('header .menu').addClass('active');
+        }
+    })
+}
+

@@ -923,3 +923,66 @@ footer .links_row .salut
 {
     background-color: #000000;
 }
+
+.btn_menu
+{
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: relative;
+    transition: 0.5s;
+    background: #e4e4e4;
+    display: none;
+    border-radius: 50%;
+}
+
+.btn_menu:before, .btn_menu:after, .btn_menu span
+{
+    height: 2px;
+    position: absolute;
+    background: #000000;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.btn_menu span
+{
+    width: 65%;    
+}
+
+.btn_menu:before
+{
+    content: "";
+    width: 50%;
+    transform: translate(-50%, -6px);
+}
+
+.btn_menu:after
+{
+    content: "";
+    width: 50%;
+    transform: translate(-50%, 6px);
+}
+
+.btn_menu:hover:after, .btn_menu:hover:before, .btn_menu:hover span
+{
+    width: 65%;
+}
+
+.btn_menu.active span
+{
+    opacity: 0; 
+}
+
+.btn_menu.active:after
+{
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.btn_menu.active:before
+{
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
