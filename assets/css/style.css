@@ -316,6 +316,14 @@ section
     top: -30px;
 }
 
+
+.section_why .title::after
+{
+    content: "Почему я?";
+    left: -45px;
+    top: -30px;
+}
+
 .section_services .title
 {
     margin-bottom: 15px;
@@ -493,6 +501,7 @@ section
 .btn_red.sm
 {
     padding: 20px 25px;
+    min-width: 200px;
 }
 
 .section_contacts_us
@@ -520,4 +529,16 @@ section
     position: relative;
     display: inline-flex;
     margin-left: 70px;
+}
+
+.section_why .col_text
+{
+    margin-left: auto;
+    width: 400px;
+    font-size: 18px;
+}
+
+.section_why .btn_wrapper
+{
+    margin-top: 50px;
 }
