@@ -6,6 +6,7 @@ function Core()
     SetModal();
     SetMobileMenu();
     SetForm();
+    SetAncors();
 }
 
 function SetReviewSlider()
@@ -118,4 +119,22 @@ function SetForm()
 function SubmitForm(form)
 {
     alert('Success')
+}
+
+function SetAncors()
+{
+    $('[ancore]').on('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: $($(this).attr('ancore')).position().top - 100,
+            left: 0,
+            behavior: 'smooth'
+        });
+
+        if ($('header .menu').hasClass('active'))
+        {
+            $('.btn_menu').removeClass('active');
+            $('header .menu').removeClass('active');
+        }
+    })
 }
