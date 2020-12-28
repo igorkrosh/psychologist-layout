@@ -986,3 +986,18 @@ footer .links_row .salut
     transform: translate(-50%, -50%) rotate(135deg);
 }
 
+header .menu .contacts
+{
+    display: none;
+}
+
+.form_group input.error
+{
+    border-color: #ef0c27;
+}
+
+.form_group label.error
+{
+    color: #ef0c27;
+}
+
