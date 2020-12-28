@@ -1,0 +1,62 @@
+@media(max-width: 1200px)
+{
+    .container 
+    {
+        max-width: 960px;
+    }
+
+    .menu a
+    {
+        font-size: 16px;
+    }
+
+    .menu li
+    {
+        margin-right: 10px;
+    }
+
+    .menu ul
+    {
+        padding-left: 0;
+    }
+
+    .contacts
+    {
+        margin-left: 0;
+    }
+
+    .btn_red
+    {
+        padding: 30px 25px;
+    }
+
+    .section_contacts_us
+    {
+        background-position-x: 40%;
+    }
+
+    .section_why .col_image
+    {
+        width: 450px;
+    }
+
+    .section_why .col_image img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .youtube_video
+    {
+        width: 450px;
+        height: 350px;
+    }
+
+    .section_acquainted .col_video
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
