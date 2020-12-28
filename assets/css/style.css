@@ -790,3 +790,136 @@ footer .links_row .salut
     font-weight: 700;
 }
 
+.modal_open
+{
+    overflow: hidden;
+}
+
+.modal
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.modal.active
+{
+    display: flex;
+}
+
+.modal_backdrop
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #000000;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.modal_backdrop.active
+{
+    opacity: 0.7;
+}
+
+@keyframes fadeInDownBig 
+{
+    from 
+    {
+      opacity: 0;
+      transform: translate3d(0, -2000px, 0);
+    }
+  
+    to 
+    {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+.fadeInDownBig 
+{
+    animation-name: fadeInDownBig;
+}
+
+@keyframes fadeOutDownBig 
+{
+    from 
+    {
+      opacity: 1;
+    }
+  
+    to 
+    {
+      opacity: 0;
+      transform: translate3d(0, 2000px, 0);
+    }
+}
+  
+.fadeOutDownBig 
+{
+    animation-name: fadeOutDownBig;
+}
+  
+
+.modal_dialog
+{
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+.btn_modal_close
+{
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.btn_modal_close:after
+{
+    content: "";
+    height: 2px;   
+    width: 70%;
+    position: absolute;
+    background-color: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn_modal_close:before
+{
+    content: "";
+    height: 2px;   
+    width: 70%;
+    position: absolute;
+    background-color: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn_modal_close:hover
+{
+    background: #ffffff
+}
+
+.btn_modal_close:hover:after, .btn_modal_close:hover:before
+{
+    background-color: #000000;
+}

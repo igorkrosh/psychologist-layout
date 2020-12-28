@@ -52,7 +52,7 @@
                     <p>Вам знакома проблема трудностей в отношениях?</p>
                     <p>Не можете найти себя?</p>
                     <p>Испытываете постоянный стресс?</p>
-                    <button class="btn_red">запишитесь на бесплатную консультацию</button>
+                    <button class="btn_red btn_modal">запишитесь на бесплатную консультацию</button>
                     <div class="icon_arrow">
                         <img src="assets/images/icons/arrow.png" alt="">
                     </div>
@@ -132,7 +132,7 @@
         <div class="container">
             <h1 class="title">Появились вопросы?</h1>
             <div class="second_card_wrapper">
-                <div class="contact_form_wrapper" data-wow-duration="1s">
+                <div class="contact_form_wrapper">
                     <span class="form_title">Заполните форму</span>
                     <span class="form_title sm">и я свяжусь с вами в ближайшее время</span>
                     <form class="contact_form" action="">
@@ -148,17 +148,13 @@
                             <label>Ваш e-mail</label>
                             <input type="mail" name="mail" class="form-control" required >
                         </div>
-                        <div class="form_group">
-                            <label>Город</label>
-                            <input type="text" name="city" class="form-control" required >
-                        </div>
                         <div class="btn_wrapper">
                             <button type="submit" class="btn_red sm btn_send_form">Бесплатная консультация</button>
                         </div>
                     </form>
                     <span class="personal_data"> нажимая кнопку, вы соглашаетесь на обработку <br>персональных данных </span>
                 </div>
-                <div class="second_card" data-wow-duration="3.5s"></div>
+                <div class="second_card"></div>
             </div>
             
         </div>
@@ -180,7 +176,7 @@
                         с обучающими курсами по различной тематике.
                     </p>
                     <div class="btn_wrapper">
-                        <button class="btn_red sm">Обратиться</button>
+                        <button class="btn_red sm btn_modal">Обратиться</button>
                     </div>
                 </div>
             </div>
@@ -287,7 +283,7 @@
                 </div>
             </div>
             <div class="btn_wrapper">
-                <button class="btn_red sm">оставьте заявку на консультацию прямо сейчас</button>
+                <button class="btn_red sm btn_modal">оставьте заявку на консультацию прямо сейчас</button>
             </div>
         </div>
     </section>
@@ -326,6 +322,33 @@
             </div>
         </div>
     </footer>
+    <div class="modal" id="modalContactForm">
+        <div class="modal_dialog">
+            <button class="btn_modal_close"></button>
+            <div class="contact_form_wrapper">
+                <span class="form_title">Заполните форму</span>
+                <span class="form_title sm">и я свяжусь с вами в ближайшее время</span>
+                <form class="contact_form" action="">
+                    <div class="form_group">
+                        <label>Ваше имя</label>
+                        <input type="text" name="name" class="form-control" required >
+                    </div>
+                    <div class="form_group">
+                        <label>Ваш номер телефона</label>
+                        <input type="tel" name="phone" class="form-control" required>
+                    </div>
+                    <div class="form_group">
+                        <label>Ваш e-mail</label>
+                        <input type="mail" name="mail" class="form-control" required >
+                    </div>
+                    <div class="btn_wrapper">
+                        <button type="submit" class="btn_red sm btn_send_form">Бесплатная консультация</button>
+                    </div>
+                </form>
+                <span class="personal_data"> нажимая кнопку, вы соглашаетесь на обработку <br>персональных данных </span>
+            </div>
+        </div>
+    </div>
     <script src="assets/js/lib/jquery-3.5.1.min.js"></script>
     <script src="assets/js/lib/owl.carousel.min.js"></script>
     <script src="assets/js/index.js"></script>

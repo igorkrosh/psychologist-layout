@@ -3,6 +3,7 @@ $(document).ready(Core);
 function Core()
 {
     SetReviewSlider();
+    SetModal();
 }
 
 function SetReviewSlider()
@@ -14,5 +15,57 @@ function SetReviewSlider()
         navText: ['', ''],
         navContainer: '.section_reviews .slider-navs',
         
+    });
+}
+
+function SetModal()
+{
+    $('.btn_modal').on('click', function()
+    {
+        ShowModal('#modalContactForm');
+    });
+
+    $('.modal_dialog').on('click', function(e) {
+        e.stopPropagation();
+    });
+
+    $('.modal').on('click', function() {
+        HideModal(`#${$(this).attr('id')}`);
+    });
+
+    $('.btn_modal_close').on('click', function ()
+    {
+        let modalId = $(this).closest('.modal').attr('id');
+        HideModal(`#${modalId}`);
+    });
+}
+
+function ShowModal(modalId)
+{
+    $(modalId + ' .modal_dialog').off('animationend');
+    $(modalId).addClass('active');
+    $('body').addClass('modal_open');
+    $(modalId + ' .modal_dialog').addClass('fadeInDownBig')
+    
+    $('body').append('<div class="modal_backdrop"></div>');
+    setTimeout(function() {
+        $('.modal_backdrop').addClass('active');
+    }, 50)
+}
+
+function HideModal(modalId)
+{
+    $(modalId + ' .modal_dialog').removeClass('fadeInDownBig');
+    $(modalId + ' .modal_dialog').addClass('fadeOutDownBig');
+    $('.modal_backdrop').removeClass('active');
+    $('body').removeClass('modal_open');
+    $(modalId + ' .modal_dialog').on('animationend', function() {
+        if (!$(modalId).hasClass('active'))
+        {
+            return;
+        }
+        $(modalId).removeClass('active');
+        $(modalId + ' .modal_dialog').removeClass('fadeOutDownBig');
+        $('.modal_backdrop').remove();
     });
 }
